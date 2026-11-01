@@ -1,0 +1,46 @@
+{
+  "source": "BME Electronics, Circuit Detection v5, Roboflow Universe",
+  "source_url": "https://universe.roboflow.com/bme-electronics/circuit-detection-eoirn/dataset/5",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "images": {
+    "train": 21,
+    "val": 3,
+    "test": 3
+  },
+  "objects": {
+    "train": {
+      "breadboard": 21,
+      "resistor": 225,
+      "wire": 503
+    },
+    "val": {
+      "breadboard": 3,
+      "resistor": 75
+    },
+    "test": {
+      "breadboard": 3,
+      "resistor": 72
+    }
+  },
+  "classes": [
+    "breadboard",
+    "resistor",
+    "wire"
+  ],
+  "kpt_shape": [
+    8,
+    3
+  ],
+  "boxes_expanded": 574,
+  "limits": [
+    "No LEDs, LED polarity, hole-number ground truth, or circuit fault labels.",
+    "Only 27 images of a few layouts, photographed on similar hardware.",
+    "Grouping based on filenames and visual review; not verified with the creator.",
+    "Red and black wire images show a related layout and are kept together in training.",
+    "Validation/test contain no wire objects; their metrics do not evaluate wire recognition.",
+    "Some wire keypoints mark free ends outside the board, not insertion holes.",
+    "Expanded boxes include labeled points but may still omit curved wire bodies.",
+    "Pilot experiment only; more independent labeled builds needed for robust evaluation."
+  ]
+}

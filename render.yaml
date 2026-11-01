@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: circuit-debugger
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/health
