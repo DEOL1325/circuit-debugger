@@ -1,10 +1,9 @@
 FROM node:20-alpine AS frontend-build
 WORKDIR /app/frontend
-RUN corepack enable
-COPY frontend/package.json frontend/pnpm-lock.yaml frontend/pnpm-workspace.yaml ./
-RUN pnpm install --frozen-lockfile
+COPY frontend/package.json ./
+RUN npm install
 COPY frontend/ ./
-RUN pnpm run build
+RUN npm run build
 
 FROM python:3.12-slim
 WORKDIR /app
